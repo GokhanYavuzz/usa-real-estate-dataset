@@ -1,4 +1,8 @@
 # usa-real-estate-dataset
+
+Gözetimli = https://www.kaggle.com/code/gkhanyavuzz/usa-real-estate-dataset
+Gözetimsiz = https://www.kaggle.com/code/gkhanyavuzz/g-zetimsiz-renme-i-in-v2
+
 Gözetimli Öğrenme için:
 
 Kütüphaneler: Gerekli kütüphaneler yüklendi (numpy, pandas, seaborn, matplotlib).
