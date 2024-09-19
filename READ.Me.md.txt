@@ -1,0 +1,67 @@
+Gözetimli Öğrenme için:
+
+Kütüphaneler: Gerekli kütüphaneler yüklendi (numpy, pandas, seaborn, matplotlib).
+
+Veri Yükleme: USA Real Estate Dataset verisi yüklendi ve ilk 30.000 satır alındı.
+
+Veri İncelemesi: Veri çerçevesinin boyutu, ilk 5 satırı ve veri tipi bilgisi kontrol edildi. Eksik veriler tespit edildi.
+
+Eksik Verilerin Doldurulması: Kategorik veriler mod ile, sayısal veriler ise medyan veya ortalama ile dolduruldu.
+
+Veri Temizleme: prev_sold_date sütunu ve eksik verileri içeren satırlar silindi.
+
+Veri Görselleştirme: Fiyat dağılımı, yatak sayısına göre fiyat dağılımı, banyo sayısına göre fiyat dağılımı ve ev boyutu ile fiyat arasındaki ilişkiler grafiklerle gösterildi.
+
+Hedef ve Özelliklerin Belirlenmesi: Hedef değişken price, özellikler ise diğer sütunlar olarak belirlendi.
+
+Veri Bölme: Eğitim ve test setlerine %70-30 oranında ayrıldı.
+
+Modelleme: Projemde, hem doğrusal regresyon hem de Random Forest modeli oluşturuldu ve eğitildi. Ancak, Random Forest modelinin daha uygun olduğunu düşündüm; çünkü karmaşık veri ilişkilerini daha iyi yakalayıp özellik etkileşimlerini dikkate alabiliyor. Ayrıca, veri setindeki gürültüye ve aşırı uyum riskine karşı daha dayanıklı. Emlak fiyatlarını tahmin etmek için bu özellikler, modelin genel performansını artırarak daha doğru ve güvenilir tahminler yapmamı sağladı.
+
+Model Performansı: MSE, MAE ve R² değerleri hesaplandı. Modelin performansı değerlendirildi.
+
+Karışıklık Matrisi:
+[[10  0  0]
+ [ 0  9  0]
+ [ 0  0 11]]
+Doğruluk (Accuracy): 1.0
+Kesinlik (Precision): 1.0
+Duyarlılık (Recall): 1.0
+F1 Puanı (F1 Score): 1.0
+
+Random Forest Mean Squared Error (MSE): 0.0020277200457195312
+Random Forest Mean Absolute Error (MAE): 0.016318282643282632
+Random Forest R² Score: 0.9970986517628815
+
+Gözetimsiz Öğrenme için:
+
+Proje Özeti
+Bu proje, ABD emlak piyasasında gözetimsiz öğrenme yöntemleri kullanarak emlak fiyatlarını analiz etmeyi hedefliyor.
+
+Veri Seti
+Kullandığım veri seti USA Real Estate Dataset. İçinde 30.000 giriş ve 12 farklı özellik var.
+
+Veri Ön İşleme
+Veri ön işleme aşamasında eksik verileri doldurdum ve kategorik değişkenleri sayısal verilere dönüştürdüm.
+
+Makine Öğrenimi Modelleri
+Bu projede K-Means ve DBSCAN algoritmalarını kullandım. İlk olarak K-Means ile denedim, ancak başarı oranı oldukça düşük çıktı. Daha sonra DBSCAN modelini kullandım ve sonuçlar çok daha tatmin edici oldu.
+
+Bu sonuç, her iki algoritmanın veri setine göre farklı performanslar gösterebileceğini ortaya koyuyor. K-Means, belirgin ve homojen küme yapılarında iyi çalışırken, DBSCAN daha karmaşık ve yoğunluk değişkenliği olan verilerde daha etkili. 
+
+USA Real Estate Dataset gibi fiyat dağılımlarının karmaşık olduğu bir veri seti için DBSCAN, gürültülü verileri etkili bir şekilde işleyerek daha başarılı kümeleme sonuçları elde etmemi sağladı.
+
+Sonuç
+Sonuçlar, makine öğrenimi tekniklerinin emlak fiyatlarını tahmin etme potansiyelini ortaya koyuyor. Proje, bu yöntemlerin ne kadar etkili olduğunu gösteriyor.
+
+Ortalama Karesel Hata (MSE): 0.375
+Ortalama Mutlak Hata (MAE): 0.5
+
+
+Karışıklık Matrisi:
+[[2 1]
+ [1 3]]
+Doğruluk (Accuracy): 0.7142857142857143
+Kesinlik (Precision): 0.75
+Duyarlılık (Recall): 0.75
+F1 Puanı (F1 Score): 0.75
